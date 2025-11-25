@@ -20,8 +20,7 @@ spec:
     spec:
       containers:
       - name: tower
-        image: fariaass/com-tower
-        imagePullPolicy: Always
+        image: fariaass/com-tower:4
         envFrom:
           - secretRef:
               name: credentials
