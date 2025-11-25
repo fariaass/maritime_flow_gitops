@@ -23,9 +23,9 @@ spec:
         image: fariaass/com-tower
         envFrom:
           - secretRef:
-            name: credentials
+              name: credentials
           - configMapRef:
-            name: towers-common-config
+              name: towers-common-config
         env:
           - name: TOWER_ID
             value: 445165c2-4186-4acc-b5e4-cf8d588a8a93
