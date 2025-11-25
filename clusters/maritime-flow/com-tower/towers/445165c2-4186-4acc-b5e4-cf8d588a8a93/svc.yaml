@@ -3,8 +3,8 @@ kind: Service
 metadata:
   labels:
     app: tower
-    uuid: 97d4756d-559c-406e-b6c1-e1cfd1fbbb89
-  name: 97d4756d-559c-406e-b6c1-e1cfd1fbbb89
+    uuid: 445165c2-4186-4acc-b5e4-cf8d588a8a93
+  name: t-445165c2-4186-4acc-b5e4-cf8d588a8a93
   namespace: tower
 spec:
   ports:
@@ -13,5 +13,5 @@ spec:
       targetPort: 8000
   selector:
     app: tower
-    uuid: 97d4756d-559c-406e-b6c1-e1cfd1fbbb89
+    uuid: 445165c2-4186-4acc-b5e4-cf8d588a8a93
   type: ClusterIP

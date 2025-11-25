@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 97d4756d-559c-406e-b6c1-e1cfd1fbbb89
+  name: s-97d4756d-559c-406e-b6c1-e1cfd1fbbb89
   namespace: central
   labels:
     app: central

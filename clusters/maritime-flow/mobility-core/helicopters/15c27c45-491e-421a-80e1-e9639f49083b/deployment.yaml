@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 15c27c45-491e-421a-80e1-e9639f49083b
+  name: v-15c27c45-491e-421a-80e1-e9639f49083b
   namespace: helicopter
   labels:
     app: helicopter
@@ -26,7 +26,7 @@ spec:
           - helicopter
           - 70
           - 70
-          - 445165c2-4186-4acc-b5e4-cf8d588a8a93.tower.svc.cluster.local
+          - t-445165c2-4186-4acc-b5e4-cf8d588a8a93.tower.svc.cluster.local
         envFrom:
           - secretRef:
             name: rabbitmq-credentials

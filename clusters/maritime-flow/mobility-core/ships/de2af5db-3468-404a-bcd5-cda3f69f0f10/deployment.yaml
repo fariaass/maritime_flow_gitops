@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: de2af5db-3468-404a-bcd5-cda3f69f0f10
+  name: v-de2af5db-3468-404a-bcd5-cda3f69f0f10
   namespace: ship
   labels:
     app: ship
@@ -26,7 +26,7 @@ spec:
           - ship
           - 70
           - 70
-          - 445165c2-4186-4acc-b5e4-cf8d588a8a93.tower.svc.cluster.local
+          - t-445165c2-4186-4acc-b5e4-cf8d588a8a93.tower.svc.cluster.local
         envFrom:
           - secretRef:
             name: rabbitmq-credentials

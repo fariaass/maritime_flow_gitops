@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 6ce17460-2163-4cff-a220-29f755929fff
+  name: s-6ce17460-2163-4cff-a220-29f755929fff
   namespace: platform
   labels:
     app: platform

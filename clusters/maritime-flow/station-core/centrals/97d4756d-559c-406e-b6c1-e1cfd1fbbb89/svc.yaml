@@ -4,7 +4,7 @@ metadata:
   labels:
     app: central
     uuid: 97d4756d-559c-406e-b6c1-e1cfd1fbbb89
-  name: 97d4756d-559c-406e-b6c1-e1cfd1fbbb89
+  name: s-97d4756d-559c-406e-b6c1-e1cfd1fbbb89
   namespace: central
 spec:
   ports:
