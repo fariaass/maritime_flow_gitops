@@ -30,6 +30,8 @@ spec:
         envFrom:
           - secretRef:
               name: rabbitmq-credentials
+          - configMapRef:
+              name: vehicles-common-config
         resources:
           requests:
             memory: "128Mi"
