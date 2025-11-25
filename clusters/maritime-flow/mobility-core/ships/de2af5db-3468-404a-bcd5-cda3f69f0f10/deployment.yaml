@@ -26,7 +26,7 @@ spec:
           - "ship"
           - "70"
           - "70"
-          - "t-445165c2-4186-4acc-b5e4-cf8d588a8a93.tower.svc.cluster.local"
+          - "t-8e570e1a-5c8c-47d9-b4f8-dda494474b30.tower.svc.cluster.local"
         envFrom:
           - secretRef:
               name: rabbitmq-credentials
