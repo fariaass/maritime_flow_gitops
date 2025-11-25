@@ -22,11 +22,11 @@ spec:
       - name: helicopter
         image: fariaass/mobility-core
         args:
-          - 15c27c45-491e-421a-80e1-e9639f49083b
-          - helicopter
-          - 70
-          - 70
-          - t-445165c2-4186-4acc-b5e4-cf8d588a8a93.tower.svc.cluster.local
+          - "15c27c45-491e-421a-80e1-e9639f49083b"
+          - "helicopter"
+          - "70"
+          - "70"
+          - "t-445165c2-4186-4acc-b5e4-cf8d588a8a93.tower.svc.cluster.local"
         envFrom:
           - secretRef:
               name: rabbitmq-credentials

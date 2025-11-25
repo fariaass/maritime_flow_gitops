@@ -22,11 +22,11 @@ spec:
       - name: ship
         image: fariaass/mobility-core
         args:
-          - de2af5db-3468-404a-bcd5-cda3f69f0f10
-          - ship
-          - 70
-          - 70
-          - t-445165c2-4186-4acc-b5e4-cf8d588a8a93.tower.svc.cluster.local
+          - "de2af5db-3468-404a-bcd5-cda3f69f0f10"
+          - "ship"
+          - "70"
+          - "70"
+          - "t-445165c2-4186-4acc-b5e4-cf8d588a8a93.tower.svc.cluster.local"
         envFrom:
           - secretRef:
               name: rabbitmq-credentials
