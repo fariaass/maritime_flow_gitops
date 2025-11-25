@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: towers-common-config
+  namespace: tower
+data:
+  TOWERS_QUEUE: towers
+  AUDIT_QUEUE: audit
+  MAX_LEADER_FAILURES: "5"
+  PROPAGATION_INTERVAL: "5"
+  HEARTBEAT_INTERVAL: "5"
+  HEARTBEAT_TIMEOUT: "5"
+  RENEW_LOCK_INTERVAL: "5"
+  RENEW_LOCK_TIMEOUT: "10"
+  BASE_DNS: svc.cluster.local

@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: de2af5db-3468-404a-bcd5-cda3f69f0f10
+  namespace: ship
+  labels:
+    app: ship
+    uuid: de2af5db-3468-404a-bcd5-cda3f69f0f10
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ship
+      uuid: de2af5db-3468-404a-bcd5-cda3f69f0f10
+  template:
+    metadata:
+      labels:
+        app: ship
+        uuid: de2af5db-3468-404a-bcd5-cda3f69f0f10
+    spec:
+      containers:
+      - name: ship
+        image: fariaass/mobility-core
+        args:
+          - de2af5db-3468-404a-bcd5-cda3f69f0f10
+          - ship
+          - 70
+          - 70
+          - 445165c2-4186-4acc-b5e4-cf8d588a8a93.tower.svc.cluster.local
+        envFrom:
+          - secretRef:
+            name: rabbitmq-credentials
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "50m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
