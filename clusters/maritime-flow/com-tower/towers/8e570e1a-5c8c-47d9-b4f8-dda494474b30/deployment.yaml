@@ -20,10 +20,12 @@ spec:
     spec:
       containers:
       - name: tower
-        image: fariaass/com-tower:23
+        image: fariaass/com-tower:24
         envFrom:
           - secretRef:
               name: credentials
+          - secretRef:
+              name: email-config
           - configMapRef:
               name: towers-common-config
         env:
