@@ -20,7 +20,7 @@ spec:
           - containerPort: 4000
         env:
           - name: VITE_API_URL
-            value: http://resource-manager-api.resource-manager-api.svc.cluster.local
+            value: https://maritime-flow-api.souzavinicius.com.br
         resources:
           requests:
             memory: "128Mi"
