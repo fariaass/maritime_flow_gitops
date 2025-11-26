@@ -20,12 +20,13 @@ spec:
     spec:
       containers:
       - name: ship
-        image: fariaass/mobility-core:5
+        image: fariaass/mobility-core:7
         args:
           - "de2af5db-3468-404a-bcd5-cda3f69f0f10"
           - "ship"
           - "70"
           - "70"
+          - "800"
           - "towers-svc.tower.svc.cluster.local"
         envFrom:
           - secretRef:

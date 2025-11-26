@@ -20,12 +20,13 @@ spec:
     spec:
       containers:
       - name: helicopter
-        image: fariaass/mobility-core:5
+        image: fariaass/mobility-core:7
         args:
           - "15c27c45-491e-421a-80e1-e9639f49083b"
           - "helicopter"
           - "70"
           - "70"
+          - "800"
           - "towers-svc.tower.svc.cluster.local"
         envFrom:
           - secretRef:
