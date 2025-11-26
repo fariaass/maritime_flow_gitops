@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: helicopter
-        image: fariaass/mobility-core:4
+        image: fariaass/mobility-core:5
         args:
           - "15c27c45-491e-421a-80e1-e9639f49083b"
           - "helicopter"
