@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: tower
-        image: fariaass/com-tower:25
+        image: fariaass/com-tower:26
         envFrom:
           - secretRef:
               name: credentials
