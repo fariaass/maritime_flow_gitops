@@ -6,6 +6,11 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod" 
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "https://maritime-flow.souzavinicius.com.br"
+    nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "100m"
 spec:
   ingressClassName: "nginx"
   tls:
