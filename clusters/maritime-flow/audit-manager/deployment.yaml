@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: audit-manager
-        image: fariaass/audit-manager:1
+        image: fariaass/audit-manager:2
         envFrom:
           - secretRef:
               name: credentials
