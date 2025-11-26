@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: platform
+    uuid: 25d8d76a-180c-499e-8f70-202c4dff67a8
+  name: s-25d8d76a-180c-499e-8f70-202c4dff67a8
+  namespace: platform
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8000
+  selector:
+    app: platform
+    uuid: 25d8d76a-180c-499e-8f70-202c4dff67a8
+  type: ClusterIP
