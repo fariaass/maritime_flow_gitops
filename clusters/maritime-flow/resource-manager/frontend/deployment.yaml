@@ -15,12 +15,12 @@ spec:
     spec:
       containers:
       - name: resource-manager-frontend
-        image: fariaass/resource-manager-frontend:4
+        image: fariaass/resource-manager-frontend:5
         ports:
           - containerPort: 4000
         env:
           - name: VITE_API_URL
-            value: https://maritime-flow-api.souzavinicius.com.br
+            value: https://maritime-flow-api.souzavinicius.com
         resources:
           requests:
             memory: "128Mi"
