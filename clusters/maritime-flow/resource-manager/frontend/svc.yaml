@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: resource-manager-frontend
+  name: resource-manager-frontend
+  namespace: resource-manager-frontend
+spec:
+  ports:
+    - port: 4000
+      protocol: TCP
+      targetPort: 4000
+  selector:
+    app: resource-manager-frontend
+  type: ClusterIP

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resource-manager-frontend
+  namespace: resource-manager-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resource-manager-frontend
+  template:
+    metadata:
+      labels:
+        app: resource-manager-frontend
+    spec:
+      containers:
+      - name: resource-manager-frontend
+        image: fariaass/resource-manager-frontend:1
+        ports:
+          - containerPort: 4000
+        env:
+          - name: VITE_API_URL
+            value: http://resource-manager-api.resource-manager-api.svc.cluster.local
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "50m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"

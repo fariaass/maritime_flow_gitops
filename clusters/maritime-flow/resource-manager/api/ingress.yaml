@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: resource-manager-api
+  namespace: resource-manager-api
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod" 
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+spec:
+  ingressClassName: "nginx"
+  tls:
+    - hosts:
+        - maritime-flow-api.souzavinicius.com.br
+      secretName: maritime-flow-api-tls-secret
+  rules:
+    - host: maritime-flow-api.souzavinicius.com.br
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: resource-manager-api
+                port:
+                  number: 4000
