@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: ship
-        image: fariaass/mobility-core:7
+        image: fariaass/mobility-core:8
         args:
           - "de2af5db-3468-404a-bcd5-cda3f69f0f10"
           - "ship"
