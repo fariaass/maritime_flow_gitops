@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: central
+    uuid: 532b7125-4036-4ad9-ae43-c114909e5b78
+  name: s-532b7125-4036-4ad9-ae43-c114909e5b78
+  namespace: central
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8000
+  selector:
+    app: central
+    uuid: 532b7125-4036-4ad9-ae43-c114909e5b78
+  type: ClusterIP
