@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: resource-manager-api
-        image: fariaass/resource-manager-api:4
+        image: fariaass/resource-manager-api:5
         ports:
           - containerPort: 4000
         envFrom:
