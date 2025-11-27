@@ -15,12 +15,14 @@ spec:
     spec:
       containers:
       - name: resource-manager-api
-        image: fariaass/resource-manager-api:2
+        image: fariaass/resource-manager-api:3
         ports:
           - containerPort: 4000
         envFrom:
           - secretRef:
               name: db-credentials
+          - secretRef:
+              name: gitops-credentials
         resources:
           requests:
             memory: "128Mi"
