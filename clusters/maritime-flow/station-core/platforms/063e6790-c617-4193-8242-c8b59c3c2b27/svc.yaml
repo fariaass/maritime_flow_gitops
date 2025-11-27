@@ -3,8 +3,8 @@ kind: Service
 metadata:
   labels:
     app: platform
-    uuid: 6ce17460-2163-4cff-a220-29f755929fff
-  name: s-6ce17460-2163-4cff-a220-29f755929fff
+    uuid: 063e6790-c617-4193-8242-c8b59c3c2b27
+  name: s-063e6790-c617-4193-8242-c8b59c3c2b27
   namespace: platform
 spec:
   ports:
@@ -13,5 +13,5 @@ spec:
       targetPort: 8000
   selector:
     app: platform
-    uuid: 6ce17460-2163-4cff-a220-29f755929fff
+    uuid: 063e6790-c617-4193-8242-c8b59c3c2b27
   type: ClusterIP

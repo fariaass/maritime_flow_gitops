@@ -3,8 +3,8 @@ kind: Service
 metadata:
   labels:
     app: central
-    uuid: 97d4756d-559c-406e-b6c1-e1cfd1fbbb89
-  name: s-97d4756d-559c-406e-b6c1-e1cfd1fbbb89
+    uuid: 872b12d7-f9ef-4b2e-84d6-09be2634d7ee
+  name: s-872b12d7-f9ef-4b2e-84d6-09be2634d7ee
   namespace: central
 spec:
   ports:
@@ -13,5 +13,5 @@ spec:
       targetPort: 8000
   selector:
     app: central
-    uuid: 97d4756d-559c-406e-b6c1-e1cfd1fbbb89
+    uuid: 872b12d7-f9ef-4b2e-84d6-09be2634d7ee
   type: ClusterIP
