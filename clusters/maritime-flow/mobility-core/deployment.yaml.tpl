@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: {{VTYPE}}
-        image: fariaass/mobility-core:8
+        image: fariaass/mobility-core:9
         args:
           - "{{VID}}"
           - "{{VTYPE}}"
