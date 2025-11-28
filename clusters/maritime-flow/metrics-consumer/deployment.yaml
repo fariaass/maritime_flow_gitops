@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: metrics-consumer
-        image: fariaass/metrics-consumer:4
+        image: fariaass/metrics-consumer:5
         envFrom:
           - secretRef:
               name: rabbitmq-credentials
