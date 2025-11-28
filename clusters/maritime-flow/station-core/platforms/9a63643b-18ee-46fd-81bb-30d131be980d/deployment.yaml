@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: s-9a63643b-18ee-46fd-81bb-30d131be980d
+  namespace: platform
+  labels:
+    app: platform
+    uuid: 9a63643b-18ee-46fd-81bb-30d131be980d
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: platform
+      uuid: 9a63643b-18ee-46fd-81bb-30d131be980d
+  template:
+    metadata:
+      labels:
+        app: platform
+        uuid: 9a63643b-18ee-46fd-81bb-30d131be980d
+    spec:
+      containers:
+      - name: platform
+        image: fariaass/station-core 
+        env:
+          - name: DOCKS_QTT
+            value: "1"
+          - name: HELIPADS_QTT
+            value: "1"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "50m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
