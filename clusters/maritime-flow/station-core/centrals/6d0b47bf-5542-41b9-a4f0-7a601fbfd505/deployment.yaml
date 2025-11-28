@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: s-6d0b47bf-5542-41b9-a4f0-7a601fbfd505
+  namespace: central
+  labels:
+    app: central
+    uuid: 6d0b47bf-5542-41b9-a4f0-7a601fbfd505
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: central
+      uuid: 6d0b47bf-5542-41b9-a4f0-7a601fbfd505
+  template:
+    metadata:
+      labels:
+        app: central
+        uuid: 6d0b47bf-5542-41b9-a4f0-7a601fbfd505
+    spec:
+      containers:
+      - name: central
+        image: fariaass/station-core 
+        env:
+          - name: DOCKS_QTT
+            value: "1"
+          - name: HELIPADS_QTT
+            value: "1"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "50m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
