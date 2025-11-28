@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v-95bdc0ed-30c5-4d4c-a542-ec9405ccd372
+  namespace: helicopter
+  labels:
+    app: helicopter
+    uuid: 95bdc0ed-30c5-4d4c-a542-ec9405ccd372
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helicopter
+      uuid: 95bdc0ed-30c5-4d4c-a542-ec9405ccd372
+  template:
+    metadata:
+      labels:
+        app: helicopter
+        uuid: 95bdc0ed-30c5-4d4c-a542-ec9405ccd372
+    spec:
+      containers:
+      - name: helicopter
+        image: fariaass/mobility-core:8
+        args:
+          - "95bdc0ed-30c5-4d4c-a542-ec9405ccd372"
+          - "helicopter"
+          - "70.1"
+          - "70.1"
+          - "800"
+          - "towers-svc.tower.svc.cluster.local"
+        envFrom:
+          - secretRef:
+              name: rabbitmq-credentials
+          - configMapRef:
+              name: vehicles-common-config
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "50m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
