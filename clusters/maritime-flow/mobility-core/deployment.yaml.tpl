@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: v-VID
-  namespace: VTYPE
+  name: v-{{VID}}
+  namespace: {{VTYPE}}
   labels:
-    app: VTYPE
-    uuid: VID
+    app: {{VTYPE}}
+    uuid: {{VID}}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: VTYPE
-      uuid: VID
+      app: {{VTYPE}}
+      uuid: {{VID}}
   template:
     metadata:
       labels:
-        app: VTYPE
-        uuid: VID
+        app: {{VTYPE}}
+        uuid: {{VID}}
     spec:
       containers:
-      - name: VTYPE
+      - name: {{VTYPE}}
         image: fariaass/mobility-core:8
         args:
-          - "VID"
-          - "VTYPE"
-          - "LATITUDE"
-          - "LONGITUDE"
-          - "VELOCITY"
+          - "{{VID}}"
+          - "{{VTYPE}}"
+          - "{{LATITUDE}}"
+          - "{{LONGITUDE}}"
+          - "{{VELOCITY}}"
           - "towers-svc.tower.svc.cluster.local"
         envFrom:
           - secretRef:

@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: t-TID
+  name: t-{{TID}}
   namespace: tower
   labels:
     app: tower
-    uuid: TID
+    uuid: {{TID}}
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: tower
-      uuid: TID
+      uuid: {{TID}}
   template:
     metadata:
       labels:
         app: tower
-        uuid: TID
+        uuid: {{TID}}
     spec:
       containers:
       - name: tower
@@ -30,7 +30,7 @@ spec:
               name: towers-common-config
         env:
           - name: TOWER_ID
-            value: TID
+            value: {{TID}}
         resources:
           requests:
             memory: "128Mi"

@@ -3,8 +3,8 @@ kind: Service
 metadata:
   labels:
     app: tower
-    uuid: TID
-  name: t-TID
+    uuid: {{TID}}
+  name: t-{{TID}}
   namespace: tower
 spec:
   ports:
@@ -13,5 +13,5 @@ spec:
       targetPort: 8000
   selector:
     app: tower
-    uuid: TID
+    uuid: {{TID}}
   type: ClusterIP

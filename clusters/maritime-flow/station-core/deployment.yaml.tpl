@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: s-SID
-  namespace: STYPE
+  name: s-{{SID}}
+  namespace: {{STYPE}}
   labels:
-    app: STYPE
-    uuid: SID
+    app: {{STYPE}}
+    uuid: {{SID}}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: STYPE
-      uuid: SID
+      app: {{STYPE}}
+      uuid: {{SID}}
   template:
     metadata:
       labels:
-        app: STYPE
-        uuid: SID
+        app: {{STYPE}}
+        uuid: {{SID}}
     spec:
       containers:
-      - name: STYPE
+      - name: {{STYPE}}
         image: fariaass/station-core 
         env:
           - name: DOCKS_QTT
