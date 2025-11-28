@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: resource-manager-frontend
-        image: fariaass/resource-manager-frontend:6
+        image: fariaass/resource-manager-frontend:7
         ports:
           - containerPort: 4000
         env:
