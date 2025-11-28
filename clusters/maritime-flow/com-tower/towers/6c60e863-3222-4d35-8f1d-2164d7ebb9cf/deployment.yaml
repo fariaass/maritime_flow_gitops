@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: t-6c60e863-3222-4d35-8f1d-2164d7ebb9cf
+  namespace: tower
+  labels:
+    app: tower
+    uuid: 6c60e863-3222-4d35-8f1d-2164d7ebb9cf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tower
+      uuid: 6c60e863-3222-4d35-8f1d-2164d7ebb9cf
+  template:
+    metadata:
+      labels:
+        app: tower
+        uuid: 6c60e863-3222-4d35-8f1d-2164d7ebb9cf
+    spec:
+      containers:
+      - name: tower
+        image: fariaass/com-tower:36
+        envFrom:
+          - secretRef:
+              name: credentials
+          - secretRef:
+              name: email-config
+          - configMapRef:
+              name: towers-common-config
+        env:
+          - name: TOWER_ID
+            value: 6c60e863-3222-4d35-8f1d-2164d7ebb9cf
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "50m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"

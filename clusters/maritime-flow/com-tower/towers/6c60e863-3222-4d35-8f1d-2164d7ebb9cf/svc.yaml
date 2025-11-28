@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: tower
+    uuid: 6c60e863-3222-4d35-8f1d-2164d7ebb9cf
+  name: t-6c60e863-3222-4d35-8f1d-2164d7ebb9cf
+  namespace: tower
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8000
+  selector:
+    app: tower
+    uuid: 6c60e863-3222-4d35-8f1d-2164d7ebb9cf
+  type: ClusterIP
